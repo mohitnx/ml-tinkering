@@ -66,9 +66,11 @@ Install with:
 pip install torch torchvision numpy pandas scikit-learn pillow tqdm
 # add `transformers` if needed:
 pip install transformers
-
-
+```
 
 **Keywords:**  
 Conformal Prediction • Calibration • Regularized Adaptive Prediction Sets • Explainability • MedicalAI • Multihead Attention • Multimodal Learning • Vision+Language Models • Uncertainty-Aware AI • Attention Mechanisms
+
+
+
 
