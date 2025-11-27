@@ -23,35 +23,8 @@ Visual explanations (what brain regions influenced the decision?)
 
 
 Architecture
-┌─────────────────────────────────────────────────────────────────┐
-│                    PIPELINE ARCHITECTURE                         │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐    │
-│  │   Dataset    │ ──► │   Training   │ ──► │  Evaluation  │    │
-│  │   Loading    │     │   (Mixup)    │     │              │    │
-│  └──────────────┘     └──────────────┘     └──────────────┘    │
-│         │                    │                    │              │
-│         ▼                    ▼                    ▼              │
-│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐    │
-│  │ Augmentation │     │   Model:     │     │ Temperature  │    │
-│  │ (Medical)    │     │ EfficientNet │     │  Scaling     │    │
-│  │              │     │ + Batch Ens  │     │ (Calibration)│    │
-│  └──────────────┘     │ or MC Dropout│     └──────────────┘    │
-│                       └──────────────┘            │              │
-│                              │                    ▼              │
-│                              ▼            ┌──────────────┐       │
-│                       ┌──────────────┐    │    RAPS      │       │
-│                       │ Uncertainty  │    │  Conformal   │       │
-│                       │ Quantification│   │  Prediction  │       │
-│                       └──────────────┘    └──────────────┘       │
-│                              │                    │               │
-│                              ▼                    ▼               │
-│                       ┌──────────────────────────────┐           │
-│                       │   Grad-CAM Visualizations    │           │
-│                       │   + Uncertainty Heatmaps     │           │
-│                       └──────────────────────────────┘           │
-└─────────────────────────────────────────────────────────────────┘
+<img width="476" height="469" alt="image" src="https://github.com/user-attachments/assets/0449d407-1ed4-4a36-82c4-57115f352773" />
+
 ---
 
 ## Notebooks (included)
